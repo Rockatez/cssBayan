@@ -7,10 +7,6 @@
   padding: 0;
 }
 
-.accordion_wrapper:target .h1{
-color: red;
-}
-
 .line {
   max-width: 300px;
   border: solid 1px gray;
@@ -20,14 +16,9 @@ color: red;
 }
 
 .img {
-height: 0;
-max-width: 150px;
+  height: 0;
+  max-width: 150px;
 }
-
-/* .accordion_element:hover .img{ 
-  height: 250px;
-  transition: all 0.7s;
-  } */
 
 a {
   width: 300px;
@@ -37,6 +28,7 @@ a {
   display: flex;
   width: 11px;
   height: 11px;
+  opacity: 0;
 }
 
 .lineUP {
@@ -44,6 +36,7 @@ a {
   transform: translateX(1.5px);
   border-radius: 10px;
 }
+
 .lineDown {
   border: solid 1px rgb(0, 0, 0);
   transform: rotate(90deg);
@@ -60,24 +53,32 @@ a {
 }
 
 .accordion_element:target .img {
-height: 125px;
-transition: all 0.3s;
+  height: 125px;
+  transition: all 0.3s;
 }
 
 .accordion_element:target .accordion_text .plus {
   transform: rotate(90deg);
   transition: all 0.5s;
-  }
+}
 
-  .accordion_element:target .accordion_text .plus {
-    transform: rotate(45deg);
-    transition: all 0.5s;
-    }
+.accordion_element:target .accordion_text .plus {
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
 
-  .accordion_hover:hover .accordion_text{
+#aElement1:target .accordion_element {
+  transition: all 0.5s;
+}
+
+.accordion_hover:hover .accordion_text {
   color: rgb(0, 0, 0);
 }
 
+.accordion_hover:hover .accordion_text .plus {
+opacity: 1;
+transition: all 0.1s;
+}
 
 .accordion_element {
   display: flex;
@@ -87,9 +88,50 @@ transition: all 0.3s;
 
 .accordion_element:target .accordion_text {
   color: black;
-  }
+}
 
-  .accordion_element:target .accordion_text .plus {
-    transform: rotate(90deg);
-    transition: all 0.5s;
-    }
+.accordion_element:not(:target):hover .img {
+  height: 125px;
+  transition: all 0.3s;
+}
+
+.accordion_element:not(:target):hover .accordion_text .plus {
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+
+#aElement1  {
+  cursor: pointer;
+}
+#aElement2 {
+  cursor: pointer;
+}
+#aElement3 {
+  cursor: pointer;
+}
+#aElement4 {
+  cursor: pointer;
+}
+#aElement5 {
+  cursor: pointer;
+}
+
+#aElement1:active  {
+  cursor: wait;
+}
+#aElement2:active  {
+  cursor: wait;
+}
+#aElement3:active  {
+  cursor: wait;
+}
+#aElement4:active  {
+  cursor: wait;
+}
+#aElement5:active  {
+  cursor: wait;
+}
+
+.accordion_wrapper {
+  font-family:fantasy;
+}
