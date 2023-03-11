@@ -12,7 +12,7 @@ color: red;
 }
 
 .line {
-  width: 300px;
+  max-width: 300px;
   border: solid 1px gray;
   display: flex;
   flex-direction: row;
@@ -21,6 +21,7 @@ color: red;
 
 .img {
 height: 0;
+max-width: 150px;
 }
 
 /* .accordion_element:hover .img{ 
@@ -39,13 +40,14 @@ a {
 }
 
 .lineUP {
-  border: solid 1px black;
+  border: solid 1px rgb(0, 0, 0);
   transform: translateX(1.5px);
-
+  border-radius: 10px;
 }
 .lineDown {
-  border: solid 1px black;
+  border: solid 1px rgb(0, 0, 0);
   transform: rotate(90deg);
+  border-radius: 10px;
 }
 
 .accordion_text {
@@ -53,10 +55,12 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
+  color: rgb(14, 25, 234);
 }
 
 .accordion_element:target .img {
-height: 250px;
+height: 125px;
 transition: all 0.3s;
 }
 
@@ -67,5 +71,25 @@ transition: all 0.3s;
 
   .accordion_element:target .accordion_text .plus {
     transform: rotate(45deg);
+    transition: all 0.5s;
+    }
+
+  .accordion_hover:hover .accordion_text{
+  color: rgb(0, 0, 0);
+}
+
+
+.accordion_element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion_element:target .accordion_text {
+  color: black;
+  }
+
+  .accordion_element:target .accordion_text .plus {
+    transform: rotate(90deg);
     transition: all 0.5s;
     }
