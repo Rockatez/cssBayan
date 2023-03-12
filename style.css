@@ -1,0 +1,198 @@
+.accordion_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.line {
+  max-width: 100%;
+  border: solid 0.063rem gray;
+  display: flex;
+  flex-direction: row;
+  opacity: 0.2;
+  margin: 0.938rem 0;
+}
+
+.img {
+  height: 0;
+  max-width: 64vh;
+}
+
+a {
+  width: 112.5vh;
+}
+
+.plus {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0;
+}
+
+.lineUP {
+  border: solid 2px rgb(0, 0, 0);
+  transform: translateX(3.5px);
+  border-radius: 0.625rem;
+}
+
+.lineDown {
+  border: solid 2px rgb(0, 0, 0);
+  transform: rotate(90deg);
+  border-radius: 0.625rem;
+}
+
+.accordion_text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(14, 25, 234);
+}
+
+.accordion_element:target .img {
+  height: 53.3vh;
+  transition: all 0.3s;
+}
+
+.accordion_element:target .accordion_text .plus {
+  transform: rotate(90deg);
+  transition: all 0.5s;
+}
+
+.accordion_element:target .accordion_text .plus {
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+
+#aElement1:target .accordion_element {
+  transition: all 0.5s;
+}
+
+.accordion_hover:hover .accordion_text {
+  color: rgb(0, 0, 0);
+}
+
+.accordion_hover:hover .accordion_text .plus {
+opacity: 1;
+transition: all 0.1s;
+}
+
+.accordion_element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion_element:target .accordion_text {
+  color: black;
+}
+
+.accordion_element:not(:target):hover .img {
+  height: 31.252rem;
+  transition: all 0.5s;
+}
+
+.accordion_element:not(:target):hover .accordion_text .plus {
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+
+#aElement1  {
+  cursor: pointer;
+}
+#aElement2 {
+  cursor: pointer;
+}
+#aElement3 {
+  cursor: pointer;
+}
+#aElement4 {
+  cursor: pointer;
+}
+#aElement5 {
+  cursor: pointer;
+}
+
+#aElement1:active  {
+  cursor: wait;
+}
+#aElement2:active  {
+  cursor: wait;
+}
+#aElement3:active  {
+  cursor: wait;
+}
+#aElement4:active  {
+  cursor: wait;
+}
+#aElement5:active  {
+  cursor: wait;
+}
+
+.accordion_wrapper {
+  font-family:fantasy;
+  font-size: 2rem;
+}
+
+
+@media (max-width: 1150px) {
+  .accordion_wrapper {
+    font-size: 1.5rem;
+  }
+  a {
+    max-width: 55.25rem;
+  }
+  .img {
+    max-width: 58.5rem;
+    max-height: 58.5rem;
+  }
+  }
+
+@media (max-width: 920px) {
+  .accordion_wrapper {
+    font-size: 1rem;
+  }
+  a {
+    max-width: 31.25rem;
+  }
+  .img {
+    max-width: 31.5rem;
+    max-height: 31.5rem;
+  }
+  .plus {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 510px) {
+  .accordion_wrapper {
+    font-size: 1rem;
+  }
+  a {
+    max-width: 19.25rem;
+  }
+  .img {
+    max-width: 19.5rem;
+    max-height: 19.5rem;
+  }
+  .plus {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 320px) {
+  .accordion_wrapper {
+    font-size: 1rem;
+  }
+  .plus {
+    width: 1rem;
+    height: 1rem;
+  }
+    .plus {
+    opacity: 1;
+  }
+}
